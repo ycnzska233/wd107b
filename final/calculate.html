@@ -66,24 +66,50 @@
     <body>
         <h1>熱量計算器</h1>
         <div class="navbar">
-                <a href="https://ycnzska233.github.io/wd107b/final/home.html">首頁</a>
-                <a href="https://ycnzska233.github.io/wd107b/final/food.html">食物</a>
-                <div class="dropdown">
-                  <button class="dropbtn" onclick="toggleDropdown()">擴充功能
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content" id="myDropdown">
-                    <a href="https://ycnzska233.github.io/wd107b/final/calculate.html">熱量計算</a>
-                    <a href="https://ycnzska233.github.io/wd107b/final/music.html">助興音樂</a>
-                  </div>
-                </div> 
-              </div>
+            <a href="https://ycnzska233.github.io/wd107b/final/home.html">首頁</a>
+            <a href="https://ycnzska233.github.io/wd107b/final/food.html">食物</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown()">擴充功能
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                <a href="https://ycnzska233.github.io/wd107b/final/calculate.html">熱量計算</a>
+                <a href="https://ycnzska233.github.io/wd107b/final/music.html">助興音樂</a>
+                </div>
+            </div> 
+        </div>
               
-              <script>
-              function toggleDropdown() {
-                  document.getElementById("myDropdown").classList.toggle("show");
-              }
-              </script>
-        <h2>哈哈哈</h2>
+        <script>
+        function toggleDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        </script>
+        <h2>殘酷的現實</h2>
+        <p>
+            3000大卡過一天<br>
+            吃多胖多 要多多注意!<br>
+        </p>
+        <script>
+            function calculate() {
+                var a = document.getElementById('a')
+                var op = document.getElementById('op')
+                var b = document.getElementById('b')
+                var result = document.getElementById('result')
+                result.innerText = eval(a.value + op.value + b.value)
+            }
+        </script>    
+        <input id="a" type="text" value="500"/>
+        <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*" selected>*</option>
+        <option value="/">/</option>
+        </select>
+    <!--    <input id="op" type="text" value="*"/>-->
+        <input id="b" type="text" value="2"/>
+        = <label id="result"></label>
+        <br/>
+        <br/>
+        <button onclick="calculate()">計算</button>
     </body>
 </html>
